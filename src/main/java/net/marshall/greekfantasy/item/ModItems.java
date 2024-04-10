@@ -18,6 +18,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
 
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_INGOT = ITEMS.register("celestial_bronze_ingot",
+            () -> new Item(new Item.Properties().fireResistant()));
+
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

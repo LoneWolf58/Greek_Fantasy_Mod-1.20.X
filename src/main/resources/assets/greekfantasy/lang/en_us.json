@@ -1,4 +1,10 @@
 {
   "item.greekfantasy.train_ticket": "Train Ticket",
-  "item.greekfantasy.train_owner_card": "Train Owner's Card"
+  "item.greekfantasy.train_owner_card": "Train Owner's Card",
+  "item.greekfantasy.celestial_bronze_ingot": "Celestial Bronze Ingot",
+
+  "block.greekfantasy.celestial_bronze_block": "Celestial Bronze Block",
+  "block.greekfantasy.celestial_bronze_ore": "Celestial Bronze Ore",
+
+  "creativetab.greekfantasy_tab": "Greek Fantasy"
 }

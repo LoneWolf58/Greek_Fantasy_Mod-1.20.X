@@ -1,6 +1,8 @@
 package net.marshall.greekfantasy;
 
 import com.mojang.logging.LogUtils;
+import net.marshall.greekfantasy.block.ModBlocks;
+import net.marshall.greekfantasy.item.ModCreativeModeTabs;
 import net.marshall.greekfantasy.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -42,6 +44,10 @@ public class GreekFantasy
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
@@ -64,12 +70,6 @@ public class GreekFantasy
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-       if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.TRAIN_TICKET);
-        }
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.TRAIN_OWNER_CARD);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
