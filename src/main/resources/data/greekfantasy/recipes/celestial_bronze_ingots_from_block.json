@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "greek fantasy",
+  "ingredients": [
+    {
+      "item": "greekfantasy:celestial_bronze_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "greekfantasy:celestial_bronze_ingot"
+  }
+}
