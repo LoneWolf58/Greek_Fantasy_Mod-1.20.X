@@ -1,6 +1,7 @@
 package net.marshall.greekfantasy.item;
 
 import net.marshall.greekfantasy.GreekFantasy;
+import net.marshall.greekfantasy.item.custom.ModFoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,6 +21,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> CELESTIAL_BRONZE_INGOT = ITEMS.register("celestial_bronze_ingot",
             () -> new Item(new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> AMBROSIA = ITEMS.register("ambrosia",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.Ambrosia)));
+
+    public static final RegistryObject<Item> GOLDEN_APPLE_OF_IMMORTALITY = ITEMS.register("golden_apple_of_immortality",
+            () -> new Item(new Item.Properties().fireResistant().food(ModFoodProperties.GOLDEN_APPLE_OF_IMMORTALITY)));
 
 
     public static void register(IEventBus eventBus){

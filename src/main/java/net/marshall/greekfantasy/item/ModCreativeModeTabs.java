@@ -5,13 +5,11 @@ import net.marshall.greekfantasy.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.swing.*;
 
 public class ModCreativeModeTabs
 {
@@ -26,6 +24,9 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.CELESTIAL_BRONZE_INGOT.get());
                         output.accept(ModItems.TRAIN_OWNER_CARD.get());
                         output.accept(ModItems.TRAIN_TICKET.get());
+
+                        output.accept(ModItems.AMBROSIA.get());
+                        output.accept(ModItems.GOLDEN_APPLE_OF_IMMORTALITY.get());
 
                         output.accept(ModBlocks.CELESTIAL_BRONZE_BLOCK.get());
                         output.accept(ModBlocks.CELESTIAL_BRONZE_ORE.get());
