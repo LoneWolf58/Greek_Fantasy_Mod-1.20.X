@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
+
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, GreekFantasy.MODID);
 
@@ -21,6 +22,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> CELESTIAL_BRONZE_INGOT = ITEMS.register("celestial_bronze_ingot",
             () -> new Item(new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> RAW_CELESTIAL_BRONZE = ITEMS.register("raw_celestial_bronze",
+            () -> new Item(new Item.Properties().fireResistant()));
+
 
     public static final RegistryObject<Item> AMBROSIA = ITEMS.register("ambrosia",
             () -> new Item(new Item.Properties().food(ModFoodProperties.Ambrosia)));
