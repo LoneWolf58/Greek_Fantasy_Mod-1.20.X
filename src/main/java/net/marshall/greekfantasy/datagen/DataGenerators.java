@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = GreekFantasy.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = GreekFantasy.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators{
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){

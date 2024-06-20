@@ -24,6 +24,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.CELESTIAL_BRONZE_ORE.get(),
                 block -> createOreDrop(ModBlocks.CELESTIAL_BRONZE_ORE.get(), ModItems.RAW_CELESTIAL_BRONZE.get()));
+
+        this.dropSelf(ModBlocks.TICKET_CHECKER.get());
     }
 
     @Override

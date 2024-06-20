@@ -3,6 +3,7 @@ package net.marshall.greekfantasy.item;
 import net.marshall.greekfantasy.GreekFantasy;
 import net.marshall.greekfantasy.item.custom.ModFoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,6 +33,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> GOLDEN_APPLE_OF_IMMORTALITY = ITEMS.register("golden_apple_of_immortality",
             () -> new Item(new Item.Properties().fireResistant().food(ModFoodProperties.GOLDEN_APPLE_OF_IMMORTALITY)));
+
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_SWORD = ITEMS.register("celestial_bronze_sword",
+            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 5, 3f,
+                    new Item.Properties().durability(256)));
 
 
     public static void register(IEventBus eventBus){
