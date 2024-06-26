@@ -1,6 +1,7 @@
 package net.marshall.greekfantasy.datagen;
 
 import net.marshall.greekfantasy.GreekFantasy;
+import net.marshall.greekfantasy.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -19,6 +20,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
        //handheldItem(ModItems.CELESTIAL_BRONZE_SWORD);
+
+        simpleItem(ModItems.CELESTIAL_BRONZE_INGOT);
+        simpleItem(ModItems.AMBROSIA);
+        //simpleItem(ModItems.RAW_CELESTIAL_BRONZE);
+        simpleItem(ModItems.TRAIN_OWNER_CARD);
+        simpleItem(ModItems.TRAIN_TICKET);
     }
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
