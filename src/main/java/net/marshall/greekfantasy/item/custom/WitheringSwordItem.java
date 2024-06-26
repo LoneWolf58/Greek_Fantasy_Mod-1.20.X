@@ -17,8 +17,14 @@ public class WitheringSwordItem extends SwordItem {
 
    @Override
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
-            if (entity.level().dimension() == Level.OVERWORLD && entity instanceof LivingEntity livingEntity) {
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.WITHER, 400), player);
+            if (entity.level().dimension() == Level.NETHER && entity instanceof LivingEntity livingEntity) {
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.WITHER, 400, 10), player);
+            }
+            else if (entity.level().dimension() == Level.OVERWORLD && entity instanceof LivingEntity livingEntity) {
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.WITHER, 400, 2), player);
+            }
+            else if (entity.level().dimension() == Level.END && entity instanceof LivingEntity livingEntity) {
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.WITHER, 400, 2), player);
             }
 
             return super.onLeftClickEntity(stack, player, entity);
