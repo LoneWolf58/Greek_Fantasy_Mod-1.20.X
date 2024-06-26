@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModItemTagGenerator extends ItemTagsProvider {
     public ModItemTagGenerator(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> future,
                                CompletableFuture<TagLookup<Block>> completableFuture, @Nullable ExistingFileHelper existingFileHelper) {
-        super(packOutput, future, completableFuture, GreekFantasy.MODID, existingFileHelper);
+        super(packOutput, future, completableFuture, GreekFantasy.MOD_ID, existingFileHelper);
     }
 
     @Override

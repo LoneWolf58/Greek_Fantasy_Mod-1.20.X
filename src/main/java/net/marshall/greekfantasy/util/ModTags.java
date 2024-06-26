@@ -12,7 +12,7 @@ public class ModTags {
     public static class Items {
 
          private static TagKey<Item> tag(String name) {
-            return ItemTags.create(new ResourceLocation(GreekFantasy.MODID, name));
+            return ItemTags.create(new ResourceLocation(GreekFantasy.MOD_ID, name));
         }
 
         private static TagKey<Item> forgeTag(String name) {
@@ -24,7 +24,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_CELESTIAL_BRONZE_TOOL = tag("needs_celestial_bronze_tool");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(GreekFantasy.MODID, name));
+            return BlockTags.create(new ResourceLocation(GreekFantasy.MOD_ID, name));
         }
 
         private static TagKey<Block> forgeTag(String name) {

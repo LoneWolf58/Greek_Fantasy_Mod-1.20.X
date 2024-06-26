@@ -22,7 +22,7 @@ import java.util.function.Supplier;
 public class ModBlocks
 {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, GreekFantasy.MODID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, GreekFantasy.MOD_ID);
 
     public static final RegistryObject<Block> CELESTIAL_BRONZE_BLOCK = registerBlock("celestial_bronze_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)

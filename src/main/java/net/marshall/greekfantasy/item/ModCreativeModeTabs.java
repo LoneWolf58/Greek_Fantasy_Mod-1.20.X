@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModCreativeModeTabs
 {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GreekFantasy.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GreekFantasy.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> GREEKFANTASY_TAB = CREATIVE_MODE_TABS.register("greekfantasy_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CELESTIAL_BRONZE_INGOT.get()))
