@@ -24,6 +24,9 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.CELESTIAL_BRONZE_INGOT.get());
                         output.accept(ModItems.TRAIN_OWNER_CARD.get());
                         output.accept(ModItems.TRAIN_TICKET.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_SWORD.get());
+
+                        output.accept(ModItems.CELESTIAL_BRONZE_LIGHTNING_SWORD.get());
 
                         output.accept(ModItems.AMBROSIA.get());
                         output.accept(ModItems.GOLDEN_APPLE_OF_IMMORTALITY.get());

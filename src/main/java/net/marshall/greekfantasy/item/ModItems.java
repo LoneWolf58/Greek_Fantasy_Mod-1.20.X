@@ -1,6 +1,7 @@
 package net.marshall.greekfantasy.item;
 
 import net.marshall.greekfantasy.GreekFantasy;
+import net.marshall.greekfantasy.item.custom.LightningStrikerSword;
 import net.marshall.greekfantasy.item.custom.ModFoodProperties;
 import net.marshall.greekfantasy.item.custom.WitheringSwordItem;
 import net.minecraft.world.item.Item;
@@ -36,7 +37,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> CELESTIAL_BRONZE_SWORD = ITEMS.register("celestial_bronze_sword",
             () -> new WitheringSwordItem(ModToolTiers.CELESTIAL_BRONZE, 5, 3f,
-                    new Item.Properties().durability(256)));
+                    new Item.Properties().durability(500)));
+
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_LIGHTNING_SWORD = ITEMS.register("celestial_bronze_lightning_sword",
+            () -> new LightningStrikerSword(ModToolTiers.CELESTIAL_BRONZE, 5, 3f,
+                    new Item.Properties().durability(500)));
 
 
     public static void register(IEventBus eventBus){
