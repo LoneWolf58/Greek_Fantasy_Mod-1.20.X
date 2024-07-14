@@ -29,9 +29,10 @@ public class LightningStrikerSword extends SwordItem {
     public LightningStrikerSword(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
-
+     //sword fires only when it has the right amount of charge
     public static int charge;
 
+    //adds whither effect and builds charge
     @Override
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
 
@@ -58,7 +59,7 @@ public class LightningStrikerSword extends SwordItem {
 
 
 
-
+   // it is supposed to summon lightning wherever the player is looking by right-clicking
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         Vec3 vec3 = pPlayer.getEyePosition().subtract(this.());
