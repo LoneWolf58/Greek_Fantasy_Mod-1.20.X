@@ -35,11 +35,9 @@ public class LightningStrikerSword extends SwordItem {
     public LightningStrikerSword(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
-     //sword fires only when it has the right amount of charge
+     //sword fires lightning only when it has the right amount of charge
     public static int charge;
     public static int superCharge;
-
-    //adds whither effect and builds charge
 
 
     @Override
@@ -48,11 +46,26 @@ public class LightningStrikerSword extends SwordItem {
             ServerLevel level = ((ServerLevel) player.level());
             BlockPos position = entity.blockPosition();
 
-            charge ++;
+            if(player.isShiftKeyDown()){
+                if(charge >= 1) {
+                    EntityType.LIGHTNING_BOLT.spawn(level, null, (Player) null, position,
+                            MobSpawnType.TRIGGERED, true, true);
 
-            if(charge > 0) {
-                EntityType.LIGHTNING_BOLT.spawn(level, null, (Player)null, position,
-                        MobSpawnType.TRIGGERED, true, true);
+                    charge--;
+
+                }
+                //uses superCharge to strike the targeted mob with lightning 100 times
+                if (superCharge >= 1){
+                    for (int i = 0; i < 100; i ++){
+                        EntityType.LIGHTNING_BOLT.spawn(level, null, (Player) null, position,
+                                MobSpawnType.TRIGGERED, true, true);
+                    }
+                    superCharge --;
+                }
+                if (!player.isShiftKeyDown()){
+                    charge ++;
+                    GreekFantasy.LOGGER.info("it Worked");
+                }
             }
         }
 
@@ -61,28 +74,32 @@ public class LightningStrikerSword extends SwordItem {
 
     }
 
-    // it is supposed to summon lightning wherever the player is looking by right-clicking
+    // it summons lightning wherever the player is looking by right-clicking
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
 
-if (Screen.hasShiftDown()){
+        //strikes the player with lightning and give a superCharge
+if (pPlayer.isShiftKeyDown()){
         if (!pPlayer.level().isClientSide) {
             ServerLevel level = ((ServerLevel) pPlayer.level());
             BlockPos playerPosition = pPlayer.blockPosition();
             EntityType.LIGHTNING_BOLT.spawn(level, null, (Player) null, playerPosition,
                     MobSpawnType.TRIGGERED, true, true);
+            superCharge ++;
         }
     }
 
-            //if (!pPlayer.level().isClientSide()) {
-             //   ServerLevel level = ((ServerLevel) pPlayer.level());
-              //  BlockPos position = blockPlayerIsLookingAt(level, pPlayer, 10);
-             //   BlockPos playerPosition = pPlayer.blockPosition();
+            //strike anywhere clicked in a 10 block radius
+            if (!pPlayer.level().isClientSide()) {
+               ServerLevel level = ((ServerLevel) pPlayer.level());
+               BlockPos position = blockPlayerIsLookingAt(level, pPlayer, 10);
+               BlockPos playerPosition = pPlayer.blockPosition();
 
-                //if (charge >= 1) {
-//                        MobSpawnType.TRIGGERED, true, true);
-                //      charge = charge - 1;
-                //     }
+               if (charge >= 1) {
+                   EntityType.LIGHTNING_BOLT.spawn(level, null, (Player)null, position,
+                           MobSpawnType.TRIGGERED, true, true);
+                       }
+            }
 
 
 

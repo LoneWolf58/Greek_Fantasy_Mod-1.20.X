@@ -5,10 +5,14 @@ import net.marshall.greekfantasy.block.ModBlocks;
 import net.marshall.greekfantasy.enchantment.ModEnchantments;
 import net.marshall.greekfantasy.item.ModCreativeModeTabs;
 import net.marshall.greekfantasy.item.ModItems;
+import net.minecraft.client.InputType;
+import net.minecraft.client.gui.screens.controls.KeyBindsScreen;
+import net.minecraft.client.player.KeyboardInput;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,7 +21,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
+
+
 
 
 @Mod(GreekFantasy.MOD_ID)
