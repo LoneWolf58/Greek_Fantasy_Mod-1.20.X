@@ -12,5 +12,12 @@
   "block.greekfantasy.celestial_bronze_block": "Celestial Bronze Block",
   "block.greekfantasy.celestial_bronze_ore": "Celestial Bronze Ore",
 
-  "creativetab.greekfantasy_tab": "Greek Fantasy"
+  "creativetab.greekfantasy_tab": "Greek Fantasy",
+
+  "key.greekfantasy.example_key": "Example Key",
+  "key.greekfantasy.example__packet_key": "Example Packet Key",
+
+  "key.category.greekfantasy." : "Greek Fantasy",
+
+  "message.greekfantasy.example_key_pressed" : " Example Key Pressed"
 }
