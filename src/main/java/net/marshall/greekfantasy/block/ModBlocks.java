@@ -34,13 +34,6 @@ public class ModBlocks
     public static final RegistryObject<Block> TICKET_CHECKER = registerBlock("ticket_checker",
             () -> new TicketChecker(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), BlockSetType.IRON, 2, false));
 
-    public static final RegistryObject<Block> MOBILE_BALLISTA = registerBlock("mobile_ballista",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion().dynamicShape()));
-
-    public static final RegistryObject<Block> STATIONARY_BALLISTA = registerBlock("stationary_ballista",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion().dynamicShape()));
-
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

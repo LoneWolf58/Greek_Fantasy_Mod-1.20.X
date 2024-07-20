@@ -3,6 +3,7 @@ package net.marshall.greekfantasy;
 import com.mojang.logging.LogUtils;
 import net.marshall.greekfantasy.block.ModBlocks;
 import net.marshall.greekfantasy.enchantment.ModEnchantments;
+import net.marshall.greekfantasy.events.ModEvents;
 import net.marshall.greekfantasy.item.ModCreativeModeTabs;
 import net.marshall.greekfantasy.item.ModItems;
 import net.minecraft.client.InputType;
@@ -47,6 +48,7 @@ public class GreekFantasy
         ModItems.register(modEventBus);
 
         ModEnchantments.register(modEventBus);
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
