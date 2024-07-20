@@ -18,5 +18,6 @@ public class ClientModHandler {
     public static void registerKeys(RegisterKeyMappingsEvent event) {
         event.register(keyBindings.INSTANCE.exampleKey);
         event.register(keyBindings.INSTANCE.examplePacketKey);
+        event.register(keyBindings.INSTANCE.newExamplePacketKey);
     }
 }

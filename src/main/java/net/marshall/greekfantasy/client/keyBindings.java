@@ -25,4 +25,11 @@ public final class keyBindings {
             InputConstants.getKey(InputConstants.KEY_V, -1),
             CATEGORY
     );
+
+    public final KeyMapping newExamplePacketKey = new KeyMapping(
+            "key." + GreekFantasy.MOD_ID + ".new_example_packet_key",
+            KeyConflictContext.IN_GAME,
+            InputConstants.getKey(InputConstants.KEY_K, -1),
+            CATEGORY
+    );
 }

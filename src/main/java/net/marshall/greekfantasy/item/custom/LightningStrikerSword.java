@@ -42,12 +42,17 @@ public class LightningStrikerSword extends SwordItem {
 
     @Override
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
+
         if(!player.level().isClientSide()) {
             ServerLevel level = ((ServerLevel) player.level());
             BlockPos position = entity.blockPosition();
 
+            if (!player.isShiftKeyDown()){
+                charge ++;
+            }
+
             if(player.isShiftKeyDown()){
-                if(charge >= 1) {
+                if(charge >= 1 && superCharge == 0) {
                     EntityType.LIGHTNING_BOLT.spawn(level, null, (Player) null, position,
                             MobSpawnType.TRIGGERED, true, true);
 
@@ -61,10 +66,6 @@ public class LightningStrikerSword extends SwordItem {
                                 MobSpawnType.TRIGGERED, true, true);
                     }
                     superCharge --;
-                }
-                if (!player.isShiftKeyDown()){
-                    charge ++;
-                    GreekFantasy.LOGGER.info("it Worked");
                 }
             }
         }
@@ -98,6 +99,8 @@ if (pPlayer.isShiftKeyDown()){
                if (charge >= 1) {
                    EntityType.LIGHTNING_BOLT.spawn(level, null, (Player)null, position,
                            MobSpawnType.TRIGGERED, true, true);
+
+                   charge --;
                        }
             }
 

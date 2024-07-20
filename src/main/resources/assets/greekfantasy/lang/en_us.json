@@ -19,5 +19,8 @@
 
   "key.category.greekfantasy." : "Greek Fantasy",
 
-  "message.greekfantasy.example_key_pressed" : " Example Key Pressed"
+  "message.greekfantasy.example_key_pressed" : " Example Key Pressed",
+  "message.greekfantasy.wrong_player_weapon_denial" : " You are the Wrong Player",
+  "message.greekfantasy.weapon_denial" : " You already have this Sword",
+  "message.greekfantasy.weapon_approval" : "Lightning Empowered Sword"
 }

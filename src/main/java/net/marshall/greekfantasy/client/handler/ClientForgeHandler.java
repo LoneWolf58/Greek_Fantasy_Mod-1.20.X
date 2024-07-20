@@ -29,7 +29,6 @@ public class ClientForgeHandler {
 
         }
         if(keyBindings.INSTANCE.examplePacketKey.consumeClick() && minecraft.player != null) {
-            minecraft.player.displayClientMessage(EXAMPLE_KEY_PRESSED, true);
             PacketHandler.sendToServer(new SKeyPressSpawnEntityPacket());
         }
     }
