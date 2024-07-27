@@ -43,8 +43,21 @@ public class ModItems {
             () -> new LightningStrikerSword(ModToolTiers.CELESTIAL_BRONZE, 5, 3f,
                     new Item.Properties().durability(500)));
 
+    public static final RegistryObject<Item> COPPER_DRACHMA = ITEMS.register("copper_drachma",
+            () -> new Item(new Item.Properties().fireResistant()));
+
     public static final RegistryObject<Item> MIXED_GOLD_DRACHMA = ITEMS.register("mixed_gold_drachma",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.Ambrosia)));
+            () -> new Item(new Item.Properties().fireResistant()));
+
+
+    public static final RegistryObject<Item> PURE_GOLD_DRACHMA = ITEMS.register("pure_gold_drachma",
+            () -> new Item(new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> DIAMOND_DRACHMA = ITEMS.register("diamond_drachma",
+            () -> new Item(new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> EMERALD_DRACHMA = ITEMS.register("emerald_drachma",
+            () -> new Item(new Item.Properties().fireResistant()));
 
 
     public static void register(IEventBus eventBus){

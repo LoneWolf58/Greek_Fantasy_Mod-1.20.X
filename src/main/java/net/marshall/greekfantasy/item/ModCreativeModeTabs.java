@@ -26,8 +26,11 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.TRAIN_TICKET.get());
                         output.accept(ModItems.CELESTIAL_BRONZE_SWORD.get());
 
+                        output.accept(ModItems.COPPER_DRACHMA.get());
                         output.accept(ModItems.MIXED_GOLD_DRACHMA.get());
-
+                        output.accept(ModItems.PURE_GOLD_DRACHMA.get());
+                        output.accept(ModItems.DIAMOND_DRACHMA.get());
+                        output.accept(ModItems.EMERALD_DRACHMA.get());
 
                         output.accept(ModItems.CELESTIAL_BRONZE_LIGHTNING_SWORD.get());
 

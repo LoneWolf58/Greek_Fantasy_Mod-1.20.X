@@ -1,7 +1,11 @@
-// 1.20.1	2024-07-20T13:55:08.9362256	Item Models: greekfantasy
+// 1.20.1	2024-07-27T19:04:42.359422	Item Models: greekfantasy
 f3af9330abba5ff2d9838e4eede0b99347bac259 assets/greekfantasy/models/item/ambrosia.json
 4e1e0213b73857eb63905bbf0685f84dc23d8d82 assets/greekfantasy/models/item/celestial_bronze_ingot.json
+4fa4467618344e3ee8b2b02e1eb738eb7e84c00a assets/greekfantasy/models/item/copper_drachma.json
+6bbad2fe2a9776dffeebe34d0a6493592474ad6d assets/greekfantasy/models/item/diamond_drachma.json
+e4b490b6fed5064f680a1d174ab78476925b236c assets/greekfantasy/models/item/emerald_drachma.json
 f4ff95e9a34c22d66df260b7a649412d00085120 assets/greekfantasy/models/item/golden_apple_of_immortality.json
 e05303541d22e32684fce801161e826bb3c1694a assets/greekfantasy/models/item/mixed_gold_drachma.json
+194eaeb573447051c7ca01b41898fd5196505d72 assets/greekfantasy/models/item/pure_gold_drachma.json
 f2a7102acb1a502de7bc3b0905f97c6a7b7e5520 assets/greekfantasy/models/item/train_owner_card.json
 47786720debc39dff76a96790aaf00b0fcdf6a96 assets/greekfantasy/models/item/train_ticket.json
