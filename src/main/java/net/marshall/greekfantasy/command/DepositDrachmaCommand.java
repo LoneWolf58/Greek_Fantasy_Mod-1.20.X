@@ -11,38 +11,46 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
 
-public class DepositMixedGoldDrachmaCommand {
+public class DepositDrachmaCommand {
 
-    public DepositMixedGoldDrachmaCommand(CommandDispatcher<CommandSourceStack> dispatcher) {
+    public DepositDrachmaCommand(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("money")
                 .then(Commands.literal("deposit")
-                .then(Commands.literal("mixed_gold_drachma")
                 .then(Commands.argument("amount", IntegerArgumentType.integer(1))
-                        .executes(this::execute)))));
+                        .executes(this::execute))));
     }
 
     private int execute(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
         ServerPlayer player = context.getSource().getPlayer();
         int amount = IntegerArgumentType.getInteger(context, "amount");
+        int playerItemCount = player.getMainHandItem().getCount();
+        int currentMoney = player.getPersistentData().getInt("greekfantasy.money");
 
-        if (player.getMainHandItem().is(ModItems.MIXED_GOLD_DRACHMA.get())) {
-            int playerItemCount = player.getMainHandItem().getCount();
+        if (player.getMainHandItem().is(ModItems.COPPER_DRACHMA.get())) {
 
             if (playerItemCount >= amount) {
 
                 player.getMainHandItem().shrink(amount);
 
-
-                int currentMoney = player.getPersistentData().getInt("greekfantasy.money");
-                player.getPersistentData().putInt("greekfantasy.money", currentMoney + amount*5);
-
+                player.getPersistentData().putInt("greekfantasy.money", currentMoney + amount);
 
                 context.getSource().sendSuccess(() -> Component.literal(amount + " Drachmas deposited"), false);
             } else {
                 context.getSource().sendSuccess(() -> Component.literal("You don't have enough Drachmas to deposit"), false);
             }
-        } else {
-            context.getSource().sendSuccess(() -> Component.literal("You need to be holding a drachma"), false);
+
+        } else if (player.getMainHandItem().is(ModItems.MIXED_GOLD_DRACHMA.get())) {
+
+            if (playerItemCount >= amount) {
+
+                player.getMainHandItem().shrink(amount);
+
+                player.getPersistentData().putInt("greekfantasy.money", currentMoney + amount+5);
+
+                context.getSource().sendSuccess(() -> Component.literal(amount + " Drachmas deposited"), false);
+            } else {
+                context.getSource().sendSuccess(() -> Component.literal("You don't have enough Drachmas to deposit"), false);
+            }
         }
         return 1;
     }

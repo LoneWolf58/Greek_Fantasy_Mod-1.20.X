@@ -1,3 +1,11 @@
-// 1.20.1	2024-07-20T14:07:20.106997	Recipes
-ef23c743a7fed16dccbd7c0a1dc76efb436d40c9 data/greekfantasy/advancements/recipes/misc/mixed_gold_drachma.json
-b1c2cc71c17d5a712cac61d4467528b5a0ebc01f data/greekfantasy/recipes/mixed_gold_drachma.json
+// 1.20.1	2024-07-28T16:25:08.6185891	Recipes
+96c2cf2f77917924dfd2c56a0c61bc6777bfe0e7 data/greekfantasy/advancements/recipes/misc/copper_drachma.json
+9e2dda861ca7ed7ec496a3d4f15f21dd519fadf1 data/greekfantasy/advancements/recipes/misc/diamond_drachma.json
+88dfd4a5cd52b524b9f374b36340f4fad4e17229 data/greekfantasy/advancements/recipes/misc/emerald_drachma.json
+be66c27e252262f1f3c650281d8e46584f2e887f data/greekfantasy/advancements/recipes/misc/mixed_gold_drachma.json
+139d168ec16a88aa2c9b27314c5bb836f9d277ea data/greekfantasy/advancements/recipes/misc/pure_gold_drachma.json
+7cd9660e7d0e35d84064708fa656b072205ac4d0 data/greekfantasy/recipes/copper_drachma.json
+d4a21935234ddb06dd456e9b2f38873134186d8b data/greekfantasy/recipes/diamond_drachma.json
+4e0e0dbd88fcf4a40d6bcd1527bd2d6f1a9c64fe data/greekfantasy/recipes/emerald_drachma.json
+155646396c16dcc2ca79f49ea023bf472cccdac9 data/greekfantasy/recipes/mixed_gold_drachma.json
+eeaf00957afdc37d6f0ee30d3140ddcc39779ed4 data/greekfantasy/recipes/pure_gold_drachma.json

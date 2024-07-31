@@ -1,12 +1,15 @@
 package net.marshall.greekfantasy.block;
 
 import net.marshall.greekfantasy.GreekFantasy;
+import net.marshall.greekfantasy.block.custom.CelestialBronzeForgeBlock;
 import net.marshall.greekfantasy.block.custom.TicketChecker;
+import net.marshall.greekfantasy.fluid.ModFluids;
 import net.marshall.greekfantasy.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -33,6 +36,15 @@ public class ModBlocks
 
     public static final RegistryObject<Block> TICKET_CHECKER = registerBlock("ticket_checker",
             () -> new TicketChecker(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), BlockSetType.IRON, 2, false));
+
+    public static final RegistryObject<Block> CELESTIAL_BRONZE_FORGE = registerBlock("celestial_bronze_forge",
+            () -> new CelestialBronzeForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<LiquidBlock> MOLTEN_CELESTIAL_BRONZE_BLOCK = BLOCKS.register("molten_celestial_bronze_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_MOLTEN_CELESTIAL_BRONZE, BlockBehaviour.Properties.copy(Blocks.LAVA).noLootTable()));
+
+    public static final RegistryObject<LiquidBlock> ROUGH_MOLTEN_CELESTIAL_BRONZE_BLOCK = BLOCKS.register("rough_molten_celestial_bronze_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_ROUGH_MOLTEN_CELESTIAL_BRONZE, BlockBehaviour.Properties.copy(Blocks.LAVA).noLootTable()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

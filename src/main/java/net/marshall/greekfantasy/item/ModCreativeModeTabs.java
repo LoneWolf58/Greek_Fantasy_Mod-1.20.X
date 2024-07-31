@@ -40,6 +40,12 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.CELESTIAL_BRONZE_BLOCK.get());
                         output.accept(ModBlocks.CELESTIAL_BRONZE_ORE.get());
 
+                        output.accept(ModBlocks.CELESTIAL_BRONZE_FORGE.get());
+
+                        output.accept(ModItems.MOLTEN_CELESTIAL_BRONZE_BUCKET.get());
+                        output.accept(ModItems.ROUGH_MOLTEN_CELESTIAL_BRONZE_BUCKET.get());
+
+
                     })).build());
 
     public static void register(IEventBus eventBus){

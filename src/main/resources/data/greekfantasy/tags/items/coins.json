@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "greekfantasy:copper_drachma",
+    "greekfantasy:mixed_gold_drachma",
+    "greekfantasy:pure_gold_drachma",
+    "greekfantasy:diamond_drachma",
+    "greekfantasy:emerald_drachma"
+  ]
+}

@@ -2,11 +2,17 @@ package net.marshall.greekfantasy;
 
 import com.mojang.logging.LogUtils;
 import net.marshall.greekfantasy.block.ModBlocks;
+import net.marshall.greekfantasy.block.entity.ModBlockEntities;
 import net.marshall.greekfantasy.enchantment.ModEnchantments;
 import net.marshall.greekfantasy.events.ModEvents;
+import net.marshall.greekfantasy.fluid.ModFluids;
+import net.marshall.greekfantasy.fluid.ModFluidsTypes;
 import net.marshall.greekfantasy.item.ModCreativeModeTabs;
 import net.marshall.greekfantasy.item.ModItems;
+import net.marshall.greekfantasy.screen.CelestialBronzeForgeScreen;
+import net.marshall.greekfantasy.screen.ModMenuTypes;
 import net.minecraft.client.InputType;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.controls.KeyBindsScreen;
 import net.minecraft.client.player.KeyboardInput;
 import net.minecraft.world.level.block.Blocks;
@@ -49,6 +55,13 @@ public class GreekFantasy
 
         ModEnchantments.register(modEventBus);
 
+        ModFluidsTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -87,6 +100,7 @@ public class GreekFantasy
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            MenuScreens.register(ModMenuTypes.CELESTIAL_BRONZE_FORGE_MENU.get(), CelestialBronzeForgeScreen::new);
         }
     }
 }

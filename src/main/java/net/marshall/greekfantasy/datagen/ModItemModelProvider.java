@@ -32,6 +32,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PURE_GOLD_DRACHMA);
         simpleItem(ModItems.DIAMOND_DRACHMA);
         simpleItem(ModItems.EMERALD_DRACHMA);
+
+        simpleItem(ModItems.MOLTEN_CELESTIAL_BRONZE_BUCKET);
+
+        simpleItem(ModItems.ROUGH_MOLTEN_CELESTIAL_BRONZE_BUCKET);
     }
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))

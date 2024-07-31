@@ -14,10 +14,15 @@
   "item.greekfantasy.diamond_drachma": "Diamond Drachma",
   "item.greekfantasy.emerald_drachma": "Emerald Drachma",
 
+  "item.greekfantasy.molten_celestial_bronze_bucket": "Molten Celestial Bronze",
+  "item.greekfantasy.rough_molten_celestial_bronze_bucket": "Rough Molten Celestial Bronze",
+
+
 
 
   "block.greekfantasy.celestial_bronze_block": "Celestial Bronze Block",
   "block.greekfantasy.celestial_bronze_ore": "Celestial Bronze Ore",
+  "block.greekfantasy.celestial_bronze_forge": "Celestial Bronze Forge",
 
   "creativetab.greekfantasy_tab": "Greek Fantasy",
 

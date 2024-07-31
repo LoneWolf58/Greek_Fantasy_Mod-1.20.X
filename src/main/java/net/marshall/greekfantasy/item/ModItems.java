@@ -1,10 +1,13 @@
 package net.marshall.greekfantasy.item;
 
 import net.marshall.greekfantasy.GreekFantasy;
+import net.marshall.greekfantasy.fluid.ModFluids;
 import net.marshall.greekfantasy.item.custom.LightningStrikerSword;
 import net.marshall.greekfantasy.item.custom.ModFoodProperties;
 import net.marshall.greekfantasy.item.custom.WitheringSwordItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -58,6 +61,15 @@ public class ModItems {
 
     public static final RegistryObject<Item> EMERALD_DRACHMA = ITEMS.register("emerald_drachma",
             () -> new Item(new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_SLAG = ITEMS.register("celestial_bronze_slag",
+            () -> new Item(new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> MOLTEN_CELESTIAL_BRONZE_BUCKET = ITEMS.register("molten_celestial_bronze_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_MOLTEN_CELESTIAL_BRONZE, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> ROUGH_MOLTEN_CELESTIAL_BRONZE_BUCKET = ITEMS.register("rough_molten_celestial_bronze_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_MOLTEN_CELESTIAL_BRONZE, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus){

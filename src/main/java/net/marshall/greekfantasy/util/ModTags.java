@@ -18,6 +18,7 @@ public class ModTags {
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
          }
+         public static final TagKey<Item> coins = tag("coins");
     }
 
     public static class Blocks {

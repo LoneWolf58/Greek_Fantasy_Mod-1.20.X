@@ -19,14 +19,50 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MIXED_GOLD_DRACHMA.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COPPER_DRACHMA.get())
+                .pattern("CCC")
+                .pattern("CGC")
+                .pattern("CCC")
+                .define('G', Items.GOLD_NUGGET)
+                .define('C', Items.RAW_COPPER)
+                .unlockedBy("has_copper", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.RAW_COPPER).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MIXED_GOLD_DRACHMA.get(),5)
                 .pattern("GIG")
                 .pattern("IGI")
                 .pattern("GIG")
                 .define('G', Items.GOLD_NUGGET)
                 .define('I', Items.IRON_NUGGET)
-                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.RAW_GOLD).build())).save(consumer);
+                .unlockedBy("has_copper", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.RAW_COPPER).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_GOLD_DRACHMA.get())
+                .pattern("GGG")
+                .pattern("GIG")
+                .pattern("GGG")
+                .define('G', Items.GOLD_NUGGET)
+                .define('I', Items.GOLD_INGOT)
+                .unlockedBy("has_copper", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.RAW_COPPER).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EMERALD_DRACHMA.get())
+                .pattern("GGG")
+                .pattern("GEG")
+                .pattern("GGG")
+                .define('G', Items.GOLD_NUGGET)
+                .define('E', Items.EMERALD)
+                .unlockedBy("has_copper", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.RAW_COPPER).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DIAMOND_DRACHMA.get())
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', Items.GOLD_NUGGET)
+                .define('D', Items.DIAMOND)
+                .unlockedBy("has_copper", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.RAW_COPPER).build())).save(consumer);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CELESTIAL_BRONZE_INGOT.get(), 9)

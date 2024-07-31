@@ -16,7 +16,6 @@ public class ModEvents {
         new DepositMixedGoldDrachmaCommand(event.getDispatcher());
         new WithdrawMixedGoldDrachmaCommand(event.getDispatcher());
 
-        new DepositCopperDrachmaCommand(event.getDispatcher());
         new WithdrawCopperDrachmaCommand(event.getDispatcher());
 
         new DepositPureGoldDrachmaCommand(event.getDispatcher());
@@ -27,6 +26,9 @@ public class ModEvents {
 
         new DepositEmeraldDrachmaCommand(event.getDispatcher());
         new WithdrawEmeraldDrachmaCommand(event.getDispatcher());
+
+        new DepositDrachmaCommand(event.getDispatcher());
+        new WithdrawDrachmaCommand(event.getDispatcher());
 
         new QueryMoneyCommand(event.getDispatcher());
 
